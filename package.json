@@ -1,0 +1,52 @@
+{
+  "name": "Enhanced iTerm MCP",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Project template with TaskMaster integration",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\"",
+    "tm": "task-master",
+    "tasks": "task-master list",
+    "next": "task-master next",
+    "dashboard": "task-master dashboard",
+    "branch": "task-master branch",
+    "complexity": "task-master analyze-complexity",
+    "report": "task-master complexity-report"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "@types/node": "^22.15.21",
+    "task-master-ai": "latest",
+    "typescript": "^5.8.3",
+    "uuid": "^11.1.0"
+  },
+  "keywords": [
+    "taskmaster",
+    "ai-development",
+    "cursor",
+    "claude"
+  ],
+  "devDependencies": {
+    "@types/uuid": "^10.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "@vitest/ui": "^3.1.4",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "prettier": "^3.5.3",
+    "vitest": "^3.1.4"
+  }
+}

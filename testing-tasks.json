@@ -1,0 +1,120 @@
+{
+  "project": {
+    "name": "Enhanced iTerm MCP Testing Suite",
+    "description": "Comprehensive test coverage for critical MCP components",
+    "version": "1.0.0",
+    "author": "Claude"
+  },
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Setup VS Code MCP Integration",
+      "description": "Add VS Code as MCP provider to enable Qodo test generation",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [],
+      "details": "Install and configure VS Code MCP server to allow Claude to interact with VS Code and use Qodo extension for automated test generation",
+      "testStrategy": "Verify VS Code MCP is accessible and Qodo commands work",
+      "subtasks": []
+    },
+    {
+      "id": 2,
+      "title": "Test CommandExecutor Core Functions",
+      "description": "Unit tests for AppleScript command execution",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [1],
+      "details": "Test writeToTerminal, readTerminalOutput, sendControlCharacter, and session-specific command execution. Mock AppleScript calls for unit testing.",
+      "testStrategy": "Mock osascript calls, test command formatting, error handling, and output parsing",
+      "subtasks": []
+    },
+    {
+      "id": 3,
+      "title": "Test ProcessTracker Monitoring",
+      "description": "Test process state detection and monitoring",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [1],
+      "details": "Test getTTYForSession, getProcessesForTTY, monitorAllSessions, and state change detection. Mock ps command output.",
+      "testStrategy": "Mock shell commands, test process parsing, state transitions, and CPU/memory calculations",
+      "subtasks": []
+    },
+    {
+      "id": 4,
+      "title": "Test SafetyTiers Security Controls",
+      "description": "Test three-tier safety system and command validation",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [1],
+      "details": "Test command safety checks, tier enforcement, approval workflows, and violation tracking for all three safety tiers.",
+      "testStrategy": "Test dangerous command detection, tier restrictions, approval mechanisms, and policy enforcement",
+      "subtasks": []
+    },
+    {
+      "id": 5,
+      "title": "Test ErrorRecovery Mechanisms",
+      "description": "Test error detection and recovery strategies",
+      "status": "pending",
+      "priority": "high",
+      "dependencies": [1],
+      "details": "Test health monitoring, error handling, retry logic with exponential backoff, and recovery strategies for different error types.",
+      "testStrategy": "Simulate various failure scenarios, test retry logic, health checks, and recovery actions",
+      "subtasks": []
+    },
+    {
+      "id": 6,
+      "title": "Test SessionManager Operations",
+      "description": "Expand existing SessionManager tests",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [1],
+      "details": "Add tests for session creation, enumeration, switching, working directory management, and cleanup operations.",
+      "testStrategy": "Mock AppleScript responses, test session lifecycle, state management, and error cases",
+      "subtasks": []
+    },
+    {
+      "id": 7,
+      "title": "Test TaskDistributor Logic",
+      "description": "Test task distribution and assignment algorithms",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [1],
+      "details": "Test task breakdown, session assignment, parallel execution coordination, and result collection.",
+      "testStrategy": "Test distribution algorithms, load balancing, task assignment, and completion tracking",
+      "subtasks": []
+    },
+    {
+      "id": 8,
+      "title": "Test ProgressAggregator Collection",
+      "description": "Test progress tracking and result synthesis",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [1],
+      "details": "Test progress updates, status aggregation, result synthesis, and completion detection across multiple sessions.",
+      "testStrategy": "Test state updates, aggregation logic, synthesis algorithms, and edge cases",
+      "subtasks": []
+    },
+    {
+      "id": 9,
+      "title": "Integration Tests for MCP Tools",
+      "description": "End-to-end tests for MCP tool handlers",
+      "status": "pending",
+      "priority": "medium",
+      "dependencies": [2, 3, 4, 5],
+      "details": "Test complete tool execution paths including request handling, parameter validation, execution, and response formatting.",
+      "testStrategy": "Test tool request/response cycles, error handling, and integration between components",
+      "subtasks": []
+    },
+    {
+      "id": 10,
+      "title": "Performance and Load Testing",
+      "description": "Test system performance under load",
+      "status": "pending",
+      "priority": "low",
+      "dependencies": [9],
+      "details": "Test system behavior with 10+ concurrent sessions, measure resource usage, and validate performance monitoring accuracy.",
+      "testStrategy": "Simulate high load scenarios, measure performance metrics, test monitoring accuracy",
+      "subtasks": []
+    }
+  ]
+}

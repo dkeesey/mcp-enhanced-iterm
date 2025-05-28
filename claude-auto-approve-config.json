@@ -1,0 +1,70 @@
+{
+  "autoApprovalConfig": {
+    "description": "Safe auto-approval configuration for Enhanced iTerm MCP development",
+    "principle": "Auto-approve common development tasks, require human approval for risky operations",
+    "allowedTools": [
+      "bash",
+      "str_replace_editor", 
+      "read",
+      "write",
+      "list_directory",
+      "create_directory",
+      "move_file",
+      "search_files",
+      "get_file_info"
+    ],
+    "safeCommands": [
+      "npm install",
+      "npm run",
+      "npm test", 
+      "npm run build",
+      "npm run dev",
+      "npm run lint",
+      "npm run format",
+      "git add",
+      "git commit",
+      "git status",
+      "git log",
+      "git diff",
+      "git push origin",
+      "git pull origin",
+      "yarn install",
+      "yarn build",
+      "yarn test",
+      "mkdir -p",
+      "touch",
+      "cp",
+      "mv",
+      "ls",
+      "pwd",
+      "cd",
+      "echo",
+      "cat",
+      "grep",
+      "find",
+      "which",
+      "node",
+      "tsc",
+      "eslint",
+      "prettier"
+    ],
+    "requireApprovalCommands": [
+      "rm -rf",
+      "sudo",
+      "chmod 777",
+      "chown",
+      "killall",
+      "pkill",
+      "git reset --hard",
+      "git clean -fd",
+      "npm uninstall -g",
+      "brew uninstall",
+      "pip uninstall"
+    ],
+    "safeFileOperations": {
+      "allowedExtensions": [".ts", ".js", ".json", ".md", ".txt", ".yml", ".yaml", ".env.example", ".gitignore"],
+      "allowedDirectories": ["src/", "dist/", "build/", "docs/", "scripts/", "tests/", "__tests__/", "spec/"],
+      "protectedFiles": [".env", "package-lock.json", ".git/", "node_modules/", "*.key", "*.pem", "*.p12"]
+    }
+  }
+}

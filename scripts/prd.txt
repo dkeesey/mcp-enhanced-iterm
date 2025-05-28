@@ -1,0 +1,173 @@
+# Enhanced iTerm MCP - Project Requirements Document
+
+## Project Overview
+Develop an advanced iTerm MCP server that enables multi-session management and autonomous Claude Code orchestration, solving CDT's single-threaded limitations by delegating parallel work to multiple CC instances.
+
+## Business Context
+**Problem**: Claude Desktop Tool (CDT) is single-threaded and loses context when switching between tasks. Manual management of multiple Claude Code (CC) instances is inefficient and error-prone.
+
+**Solution**: Enhanced iTerm MCP that provides systematic AI orchestration capabilities, enabling parallel work distribution across multiple CC instances with automatic coordination.
+
+**Value**: 3-5x faster completion of complex projects, 90% reduction in coordination errors, 80% autonomous operation for routine tasks.
+
+## Goals and Objectives
+
+### Primary Goals
+1. **Multi-session Management**: Control multiple iTerm sessions programmatically
+2. **Claude Code Orchestration**: Direct prompting and coordination of CC instances
+3. **Parallel Task Execution**: Distribute work across multiple AI instances
+4. **Autonomous Operation**: Minimize manual intervention in routine workflows
+
+### Success Metrics
+- **Efficiency**: 3-5x faster completion of multi-faceted projects
+- **Reliability**: 90% fewer coordination errors between processes
+- **Autonomy**: 80% of routine tasks execute without intervention
+- **Compatibility**: 100% backward compatibility with existing iTerm MCP
+
+## Feature Requirements
+
+### Core Features (Phase 1 - Weeks 1-2)
+1. **Enhanced Session Management**
+   - Enumerate all active iTerm tabs/windows with unique IDs
+   - Send commands to specific sessions by ID/name/tag
+   - Read output from multiple sessions simultaneously
+   - Monitor session states and running processes
+
+2. **Advanced API Extensions**
+   ```javascript
+   // New API methods beyond current iTerm MCP
+   list_terminal_sessions()                    // Discover all sessions
+   read_session_output(session_id, lines)     // Target specific session
+   write_to_session(session_id, command)      // Send to specific session
+   create_session(name, working_directory)    // Create new session
+   monitor_all_sessions()                     // Parallel monitoring
+   get_session_state(session_id)              // Session status
+   ```
+
+3. **Backward Compatibility**
+   - Maintain all existing iTerm MCP functionality
+   - Ensure seamless upgrade path
+   - No breaking changes for current implementations
+
+### Advanced Features (Phase 2 - Weeks 3-4)
+1. **Claude Code Orchestration**
+   - Direct prompting to specific CC instances
+   - Task distribution algorithms
+   - Progress aggregation and reporting
+   - Error detection and recovery
+
+2. **Coordination System**
+   - Enable indirect communication between CC instances
+   - Dependency management for sequential/parallel tasks
+   - Resource allocation and load balancing
+
+### Enterprise Features (Phase 3 - Weeks 5-6)
+1. **Safety Tiers Implementation**
+   - **Tier 1**: Full autonomy for safe operations (file analysis, reports)
+   - **Tier 2**: Supervised execution (propose → approve → execute)
+   - **Tier 3**: Manual control for strategic decisions
+
+2. **Advanced Monitoring**
+   - Resource usage tracking (CPU/memory per CC instance)
+   - Real-time output streaming and aggregation
+   - Notification system for task completion/errors
+   - Session persistence across system restarts
+
+## Technical Requirements
+
+### Technology Stack
+- **Language**: TypeScript/JavaScript (consistent with existing MCP ecosystem)
+- **Framework**: Model Context Protocol (MCP) standard
+- **Platform**: macOS (iTerm2 integration via AppleScript)
+- **Dependencies**: Existing iTerm MCP as foundation
+- **Package Manager**: npm
+
+### Integration Requirements
+- **MCP Compatibility**: Full compliance with MCP standards
+- **iTerm Integration**: AppleScript APIs for session management
+- **Claude Desktop**: Seamless integration with CDT workflow
+- **Claude Code**: Direct prompting and coordination capabilities
+
+### Performance Requirements
+- **Response Time**: < 100ms for session enumeration
+- **Throughput**: Handle 10+ concurrent CC instances
+- **Memory Usage**: < 50MB additional overhead
+- **Reliability**: 99.9% uptime for session coordination
+
+### Security Requirements
+- **Sandboxing**: Isolated execution environments
+- **Permission Management**: Granular control over session access
+- **Audit Logging**: Track all session commands and outputs
+- **Error Isolation**: Failures in one session don't affect others
+
+## Success Criteria
+
+### Phase 1 Success (Enhanced Session Management)
+- ✅ Enumerate and target multiple iTerm sessions
+- ✅ Parallel output reading from 5+ sessions
+- ✅ 100% backward compatibility maintained
+- ✅ Basic coordination between sessions working
+
+### Phase 2 Success (CC Orchestration)
+- ✅ Direct prompting to CC instances functional
+- ✅ Task distribution working for 3+ parallel workflows
+- ✅ Progress aggregation and error recovery implemented
+- ✅ Real-world validation with Walt Opie project
+
+### Phase 3 Success (Enterprise Features)
+- ✅ Safety tier system operational
+- ✅ Autonomous workflow execution for Tier 1 tasks
+- ✅ Performance monitoring and optimization complete
+- ✅ Client demonstration ready for services business
+
+## Timeline and Milestones
+
+### Week 1-2: Foundation
+- **Milestone 1**: Multi-session discovery and targeting
+- **Milestone 2**: Parallel output reading implementation
+- **Milestone 3**: Backward compatibility verification
+
+### Week 3-4: Orchestration
+- **Milestone 4**: Direct CC prompting capability
+- **Milestone 5**: Task distribution algorithm
+- **Milestone 6**: Progress aggregation system
+
+### Week 5-6: Polish
+- **Milestone 7**: Safety tier implementation
+- **Milestone 8**: Performance optimization
+- **Milestone 9**: Documentation and testing complete
+
+### Validation Project
+- **Walt Opie Project**: Use as real-world test case for multi-faceted analysis
+- **Services Business Demo**: Prepare client demonstration of AI team capabilities
+
+## Integration with Services Business
+
+### Value Demonstration
+- **Systematic Automation**: Show clients advanced AI orchestration capabilities
+- **Scalability**: Manage multiple client projects simultaneously
+- **Quality Consistency**: Standardized processes across all work
+- **Competitive Advantage**: Unique automation capabilities in market
+
+### Client Applications
+- **Complex Analysis**: Multi-perspective research and recommendations
+- **Content Creation**: Parallel development of different content types
+- **Technical Projects**: Coordinated development across multiple workstreams
+- **Proposal Generation**: Automated proposal creation addressing multiple requirements
+
+## Risk Mitigation
+
+### Technical Risks
+- **AppleScript Limitations**: Fallback to manual session management
+- **CC Instance Failures**: Robust error handling and recovery
+- **Performance Issues**: Incremental optimization and monitoring
+
+### Business Risks
+- **Over-automation**: Gradual rollout starting with Tier 1 only
+- **Client Skepticism**: Clear demonstration of value and reliability
+- **Integration Complexity**: Extensive testing with fallback mechanisms
+
+## Notes
+This enhanced iTerm MCP becomes the foundation for scaling the services business through systematic AI orchestration, demonstrating advanced automation capabilities that differentiate our offerings in the market.
+
+The project directly addresses the current limitation of CDT's single-threaded operation while providing a path to autonomous AI team coordination for complex client projects.
