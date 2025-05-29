@@ -39,8 +39,9 @@ export class ClaudeCodeIntegration {
       const escapedPrompt = prompt.replace(/'/g, "'\\''").replace(/\n/g, ' ');
       
       // Send the prompt to Claude Code
-      // Using the claude-code CLI or equivalent command
-      const command = `claude-code '${escapedPrompt}'`;
+      // Using the claude-code CLI or equivalent command  
+      // CRITICAL: Add newline to trigger Claude Code execution
+      const command = `claude-code '${escapedPrompt}'\n`;
       await this.commandExecutor.writeToSession(sessionId, command);
       
       // Wait for response (with timeout)
