@@ -1,0 +1,11 @@
+# Task ID: 5
+# Title: Parallel Session Monitoring
+# Status: done
+# Dependencies: 4
+# Priority: medium
+# Description: Implement simultaneous monitoring of multiple sessions
+# Details:
+Create monitor_all_sessions() function that can read output from multiple sessions concurrently, track session states, and detect when sessions start/stop processes.
+
+# Test Strategy:
+Test with 5+ concurrent sessions, verify all outputs are captured without interference, and session state tracking is accurate.

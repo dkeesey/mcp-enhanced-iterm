@@ -1,0 +1,11 @@
+# Task ID: 1
+# Title: Project Setup and Foundation
+# Status: done
+# Dependencies: None
+# Priority: high
+# Description: Initialize project structure, dependencies, and development environment
+# Details:
+Set up TypeScript project with MCP SDK, establish testing framework, configure development tools, and ensure backward compatibility with existing iTerm MCP.
+
+# Test Strategy:
+Verify project builds, tests run, and existing iTerm MCP functionality works unchanged.

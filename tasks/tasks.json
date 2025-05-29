@@ -1,0 +1,201 @@
+{
+  "projectName": "Enhanced iTerm MCP",
+  "description": "Advanced iTerm MCP server for multi-session management and Claude Code orchestration",
+  "version": "1.0.0",
+  "created": "2025-05-26",
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Project Setup and Foundation",
+      "description": "Initialize project structure, dependencies, and development environment",
+      "status": "done",
+      "priority": "high",
+      "dependencies": [],
+      "details": "Set up TypeScript project with MCP SDK, establish testing framework, configure development tools, and ensure backward compatibility with existing iTerm MCP.",
+      "testStrategy": "Verify project builds, tests run, and existing iTerm MCP functionality works unchanged.",
+      "subtasks": []
+    },
+    {
+      "id": 2,
+      "title": "Research Current iTerm MCP Implementation",
+      "description": "Analyze existing iTerm MCP codebase and AppleScript APIs",
+      "status": "done",
+      "priority": "high",
+      "dependencies": [
+        1
+      ],
+      "details": "Deep dive into current iTerm MCP source code, understand AppleScript integration patterns, identify extension points, and document the current API surface.",
+      "testStrategy": "Create comprehensive documentation of current implementation and identify specific areas for enhancement.",
+      "subtasks": []
+    },
+    {
+      "id": 3,
+      "title": "Design Multi-Session Discovery API",
+      "description": "Design and implement session enumeration and identification",
+      "status": "done",
+      "priority": "high",
+      "dependencies": [
+        2
+      ],
+      "details": "Implement list_terminal_sessions() function using AppleScript to enumerate all iTerm tabs/windows with unique identifiers, names, and status information.",
+      "testStrategy": "Test with multiple iTerm sessions open, verify unique ID generation and session metadata accuracy.",
+      "subtasks": []
+    },
+    {
+      "id": 4,
+      "title": "Implement Session-Targeted Operations",
+      "description": "Enable reading and writing to specific iTerm sessions",
+      "status": "done",
+      "priority": "high",
+      "dependencies": [
+        3
+      ],
+      "details": "Implement read_session_output() and write_to_session() functions that can target specific sessions by ID, with proper error handling for non-existent sessions.",
+      "testStrategy": "Verify commands are sent to correct sessions, output is read from intended sessions, and error handling works for invalid session IDs.",
+      "subtasks": []
+    },
+    {
+      "id": 5,
+      "title": "Parallel Session Monitoring",
+      "description": "Implement simultaneous monitoring of multiple sessions",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        4
+      ],
+      "details": "Create monitor_all_sessions() function that can read output from multiple sessions concurrently, track session states, and detect when sessions start/stop processes.",
+      "testStrategy": "Test with 5+ concurrent sessions, verify all outputs are captured without interference, and session state tracking is accurate.",
+      "subtasks": []
+    },
+    {
+      "id": 6,
+      "title": "Session Creation and Management",
+      "description": "Enable programmatic creation and lifecycle management of sessions",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        3
+      ],
+      "details": "Implement create_session() and session lifecycle management, including setting working directories, session names, and cleanup procedures.",
+      "testStrategy": "Verify new sessions are created with correct parameters, working directories are set properly, and cleanup works correctly.",
+      "subtasks": []
+    },
+    {
+      "id": 7,
+      "title": "Claude Code Integration Research",
+      "description": "Research and design Claude Code direct prompting mechanism",
+      "status": "done",
+      "priority": "high",
+      "dependencies": [
+        5
+      ],
+      "details": "Investigate how to programmatically send prompts to Claude Code instances, receive responses, and detect completion/error states.",
+      "testStrategy": "Demonstrate successful automated prompting of a Claude Code instance with response capture.",
+      "subtasks": []
+    },
+    {
+      "id": 8,
+      "title": "Task Distribution Algorithm",
+      "description": "Design system for distributing work across multiple CC instances",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        7
+      ],
+      "details": "Create intelligent task distribution logic that can split complex work across multiple Claude Code instances based on task type, complexity, and instance availability.",
+      "testStrategy": "Test with a complex task that gets distributed across 3+ CC instances with successful coordination.",
+      "subtasks": []
+    },
+    {
+      "id": 9,
+      "title": "Progress Aggregation System",
+      "description": "Implement system to combine outputs from multiple CC instances",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        8
+      ],
+      "details": "Build progress aggregation that can collect outputs from multiple CC instances, detect completion states, and synthesize results into coherent output.",
+      "testStrategy": "Verify successful aggregation of outputs from multiple CC instances into coherent final result.",
+      "subtasks": []
+    },
+    {
+      "id": 10,
+      "title": "Error Detection and Recovery",
+      "description": "Implement robust error handling for CC instance failures",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        9
+      ],
+      "details": "Build error detection for CC instance failures, implement automatic retry logic, and provide graceful degradation when instances become unavailable.",
+      "testStrategy": "Test recovery from various failure scenarios including CC crashes, network issues, and session termination.",
+      "subtasks": []
+    },
+    {
+      "id": 11,
+      "title": "Safety Tier Implementation",
+      "description": "Implement three-tier safety system for autonomous operation",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        10
+      ],
+      "details": "Implement Tier 1 (full autonomy for safe operations), Tier 2 (supervised execution), and Tier 3 (manual control) with appropriate safeguards and approval workflows.",
+      "testStrategy": "Verify each tier operates correctly with appropriate safeguards and approval processes.",
+      "subtasks": []
+    },
+    {
+      "id": 12,
+      "title": "Performance Monitoring and Optimization",
+      "description": "Add comprehensive monitoring and performance optimization",
+      "status": "done",
+      "priority": "low",
+      "dependencies": [
+        11
+      ],
+      "details": "Implement resource usage tracking, performance metrics, real-time monitoring dashboards, and optimization for handling 10+ concurrent CC instances.",
+      "testStrategy": "Verify monitoring accurately tracks resource usage and performance meets specified targets.",
+      "subtasks": []
+    },
+    {
+      "id": 13,
+      "title": "Walt Opie Project Validation",
+      "description": "Real-world testing using Walt Opie project as validation case",
+      "status": "done",
+      "priority": "high",
+      "dependencies": [
+        10
+      ],
+      "details": "Use the Walt Opie project as a real-world test case for multi-faceted analysis, validating the enhanced iTerm MCP in actual client work.",
+      "testStrategy": "Successfully complete a portion of Walt Opie analysis using the enhanced iTerm MCP with multiple CC instances.",
+      "subtasks": []
+    },
+    {
+      "id": 14,
+      "title": "Documentation and Client Demo Preparation",
+      "description": "Complete documentation and prepare client demonstration",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        13
+      ],
+      "details": "Create comprehensive documentation, API reference, usage examples, and prepare a client demonstration showcasing AI team coordination capabilities.",
+      "testStrategy": "Verify documentation is complete and client demo successfully demonstrates the system's capabilities.",
+      "subtasks": []
+    },
+    {
+      "id": 15,
+      "title": "Integration Testing and Release Preparation",
+      "description": "Final integration testing and release preparation",
+      "status": "done",
+      "priority": "medium",
+      "dependencies": [
+        14
+      ],
+      "details": "Comprehensive integration testing, backward compatibility verification, performance validation, and preparation for production release.",
+      "testStrategy": "Full test suite passes, performance targets met, and backward compatibility confirmed.",
+      "subtasks": []
+    }
+  ]
+}

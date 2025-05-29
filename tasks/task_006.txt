@@ -1,0 +1,11 @@
+# Task ID: 6
+# Title: Session Creation and Management
+# Status: done
+# Dependencies: 3
+# Priority: medium
+# Description: Enable programmatic creation and lifecycle management of sessions
+# Details:
+Implement create_session() and session lifecycle management, including setting working directories, session names, and cleanup procedures.
+
+# Test Strategy:
+Verify new sessions are created with correct parameters, working directories are set properly, and cleanup works correctly.

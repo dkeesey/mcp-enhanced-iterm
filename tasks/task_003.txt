@@ -1,0 +1,11 @@
+# Task ID: 3
+# Title: Design Multi-Session Discovery API
+# Status: done
+# Dependencies: 2
+# Priority: high
+# Description: Design and implement session enumeration and identification
+# Details:
+Implement list_terminal_sessions() function using AppleScript to enumerate all iTerm tabs/windows with unique identifiers, names, and status information.
+
+# Test Strategy:
+Test with multiple iTerm sessions open, verify unique ID generation and session metadata accuracy.

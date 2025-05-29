@@ -1,0 +1,11 @@
+# Task ID: 4
+# Title: Implement Session-Targeted Operations
+# Status: done
+# Dependencies: 3
+# Priority: high
+# Description: Enable reading and writing to specific iTerm sessions
+# Details:
+Implement read_session_output() and write_to_session() functions that can target specific sessions by ID, with proper error handling for non-existent sessions.
+
+# Test Strategy:
+Verify commands are sent to correct sessions, output is read from intended sessions, and error handling works for invalid session IDs.

@@ -1,0 +1,11 @@
+# Task ID: 2
+# Title: Research Current iTerm MCP Implementation
+# Status: done
+# Dependencies: 1
+# Priority: high
+# Description: Analyze existing iTerm MCP codebase and AppleScript APIs
+# Details:
+Deep dive into current iTerm MCP source code, understand AppleScript integration patterns, identify extension points, and document the current API surface.
+
+# Test Strategy:
+Create comprehensive documentation of current implementation and identify specific areas for enhancement.
